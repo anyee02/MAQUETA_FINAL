@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">BIENVENIDOS A MI MINI-BLOG</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <main>
+      <div class="row">
+        <section class="col-68">
+          <h2 class="h4 mp-5 pt-5">¿Quien Soy?</h2>
+
+          <!--ARTICULOS-->
+          <article>
+
+            <hr>
+            <p class="Articulo1">
+              Mi Nombre es <strong>ANYELINA MERCEDES DIAZ TAVAREZ</strong>, Estudiante de la Universidad Dominicana O&M de la carrera Ingenieria en sistemas y computacion, cursando el decimo cuatrimestre.</p>
+
+            <img class="foto" src="IMAGEN/WhatsApp Image 2023-06-07 at 8.22.11 PM.jpeg" alt="Foto"><br>
+            <!-- <h3 class="sklill">Data Analyst | Front-end | Back-end |Movil Developer | instructor | Blogger</h3> -->
+           
+            
+                
+            <p class="Articulo1">
+              Soy una persona optimista, alegre. Mi deseo es lograr terminar la carrera y graduarme.
+              <br> <br>
+              Como persona organizada y con una gran motivación, soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto, al mismo tiempo que me esfuerzo por trabajar en equipo y fomentar valores como los del compañerismo.
+              Me llama la atencion la tecnologia debido a que aumenta la productividad y la eficiencia de las actividades humanas, ya que nos permite realizar las tareas en menos tiempo. Además, gracias a la gran cantidad de información que se dispone, es posible tomar decisiones más acertadas y reducir los errores humanos.
+              La tecnología básicamente tiene un fin primordial que es lograr transformar el ambiente (natural y social), para adaptarlo mejor a las necesidades y deseos del ser humano.
+
+              <br> <br>
+              Gracias a esta materia he adquirido conocimiento en lo que es Programacion, Diseño de Pagina Web, Bootstrap,etc. Cosas que desconocia en su totalidad.
+            </p>
+
+         
+            <h3 class="skill">Mis habilidades:</h3>
+           
+            <table>
+              <tr>
+                <th>Habilidad</th>
+                <th>Dominio</th>
+              </tr>
+              <tr>
+                <td><span>📊</span>Analisis de datos</td>
+                <td><progress value="30" max="100"></progress></td>
+              </tr>
+              <tr>
+                <td><span>🖥️</span>programación</td>
+                <td><progress value="65" max="100"></progress></td>
+              </tr>
+              <tr>
+                <td><span>⚙️</span>Software</td>
+                <td><progress value="70" max="100"></progress></td>
+              </tr>
+              <tr>
+                <td><span>📱</span>Celular</td>
+                <td><progress value="90" max="100"></progress></td>
+              </tr>
+    
+              <tr>
+                <td><span>✍️</span>Aprendizaje</td>
+                <td><progress value="90" max="100"></progress></td>
+              </tr>
+            </table>   
+
+
+            <script>
+              const skillList = document.querySelectorAll('.skill-list li progress');
+            
+              skillList.forEach(progressBar => {
+                progressBar.value = Math.floor(Math.random() * 101); // Genera valor aleatorio entre 0 y 100
+              });
+            </script>
+
+
+          </article>
+          
+          <hr>
+          <div class="centrar-contenido">
+          <div class="redes">
+            <h2>Sigueme en mi Redes Sociales</h2>
+
+            <!-- Agregamos font awesome icons -->
+            <a href="https://www.youtube.com/@anyelinadiaz7804/about" class="fa fa-youtube-square" style="font-size:48px; color: blue;"></a>
+            <a href="https://www.facebook.com/profile.php?id=100007296497065" class="fa fa-facebook-square" style="font-size:48px; color: blue;"></a>
+            <a href="https://twitter.com/Anyelin05400924" class="fa fa-twitter-square" style="font-size:48px; color: blue;"></a>
+            <a href="https://github.com/anyee02" class="fa fa-github-square" style="font-size:48px; color: blue;"></a>
+            <a href="https://www.instagram.com/anyee_diaz/" class="fa fa-instagram" style="font-size:48px; color: blue;"></a>
+          
+            
+          </div>
+        </div>
+
+
+
+        </section>
+
+                <!-- Barra lateral -->
+                <aside class="col-28">
+                  <h2 class="h4">🤩ANUNCIOS🤩</h2>
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <img src="IMAGEN/6Ug0.gif"
+                      alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+                    <p>La ingeniería de sistemas es un campo interdisciplinario de la ingeniería que permite estudiar y comprender la realidad, con el propósito de implementar u optimizar sistemas complejos.</p>
+                    <a href="#" class="btn btn-success">Ver Publicidad</a>
+                  </div>
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <img class="web"
+                      src="IMAGEN/16080660925480.jpg"
+                      alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+                    <p>La robótica es una ciencia que aglutina varias ramas tecnológicas: la rama de la ingeniería mecánica, de la ingeniería electrónica y de las ciencias de la computación, ocupándose del diseño, construcción, operación, estructura, manufactura y aplicación de los robots.
+                    </p>
+                    <a href="#" class="btn btn-success">Ver Publicidad</a>
+                  </div>
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <img src="IMAGEN/Rr20.gif" alt="Anuncio publicitario"
+                      class="img-fluid rounded mb-2">
+                    <p>La tecnología es la suma de técnicas, habilidades, métodos y procesos utilizados en la producción de bienes o servicios o en el logro de objetivos, como la investigación científica.
+                    </p>
+                    <a href="#" class="btn btn-success">Ver Publicidad</a>
+                  </div>
+        
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <img src="IMAGEN/giphy.gif" alt="Anuncio publicitario"
+                      class="img-fluid rounded mb-2">
+                    <p class="text-center">Un profesional que conoce en qué consiste la Ingeniería en Sistemas  debe ser un experto en la creación e implementación de software y hardware. De igual forma es responsable de realizar trabajos en red y en la web, desde el diseño hasta el mantenimiento y desarrollo de los mismos.
+
+                    </p>
+                    <a href="#" class="btn btn-success">Ver Publicidad</a>
+                  </div>
+                  
+        
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/b4-Urd97cOk?si=4xGMFAkPp7QPjrpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p>Top de los 10 mejores Samsung para 2023.
+                    </p>
+                    <a href="#" class="btn btn-success">Ver más Videos</a>
+        
+                  </div>
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/0q9X4RvRUUI?si=ZkE_2cTwtDiHeI8J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p>Internet Explorer 11 no esta muerto.
+                    </p>
+                    <a href="#" class="btn btn-success">Ver más Videos</a>
+        
+                  </div>
+        
+                  <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/BlwfQgvH_V8?si=lQ4PrCrw8bThq-5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p>
+                    Los 10 mejores lugares para visitar en 2023.
+                    <p>
+                    <a href="#" class="btn btn-success">Ver más Videos</a>
+        
+                  </div>
+        
+                  
+        
+                </aside>
+
+
+      </div>
+
+    </main>
+    <footer class="bg-primary text-white mt-4">
+      <h2>ANYELINA MERCEDES DIAZ TAVAREZ 
+        20-EISM-1-079
+      </h2>
+    </footer>
+  </div>
+
+</body>
+
+</html>

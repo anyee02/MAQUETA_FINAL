@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+ <!-- Contenedor principal -->
+  <div class="container">
+
+   <!-- Carrusel de imágenes -->
+   <div class="w3-container">
+    <h2>👩‍💻LA TECNOLOGIA👩‍💻</h2>
+    <h2>Otros dicen que debemos tener cuidado
+      y no dejar que se apodere de nuestras vida
+      pero digo que deberíamos disfrutarlo
+      Y dejar que nos lleve a donde pueda después de todo, está aquí para quedarse.</h2>
+    <p>Así que disfrutemos el viaje
+      ¡Y mira a dónde nos lleva!
+      </p>
+  </div>
+
+  <div class="w3-content" style="max-width:1200px">
+    <img class="mySlides" src="IMAGEN/Captura de pantalla 1.jpg" style="width:100%">
+    <img class="mySlides" src="IMAGEN/Captura de pantalla 2.jpg" style="width:100%">
+    <img class="mySlides" src="IMAGEN/Captura de pantalla 3.jpg" style="width:100%">
+    <img class="mySlides" src="IMAGEN/Captura de pantalla 4.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <!-- <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>  -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
+    }
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+  </script>
+
+    <br>
+    <!-- Encabezado de la página -->
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">BIENVENIDOS A MI MINI-BLOG</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    
+    <!-- Contenido principal -->
+    <div class="centrar-contenido">
+
+    <main>
+      <div class="row">
+        <article class="col-68">
+          <h3 class="h4 mp-5 pt-1"><strong>¿QUE ES LA APPLE?</strong></h3>
+          <article>
+
+            <img class="web"
+              src="IMAGEN/open_graph_logo.png" 
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <hr>
+            <p class="Articulo1">
+              Es una empresa tecnológica estadounidense que diseña y produce equipos electrónicos, 
+              software y servicios en línea. Tiene su sede principal en el Apple Park, en Cupertino (California, Estados Unidos) y la sede europea en la ciudad de Cork (Irlanda).​Sus productos de hardware incluyen el teléfono inteligente iPhone, la tableta iPad, la computadora personal Mac, el reproductor de medios portátil iPod, el reloj inteligente Apple Watch, las gafas de realidad mixta y computación espacial Apple Vision Pro y el reproductor de medios digitales Apple TV. Entre el software de Apple se encuentran los sistemas operativos iOS, iPadOS, macOS, watchOS, visionOS y tvOS, el explorador de contenido multimedia iTunes, la suite iWork (software de productividad), Final Cut Pro X (una suite de edición de vídeo profesional), Logic Pro (software para edición de audio en pistas de audio), Xsan (software para el intercambio de datos entre servidores) y el buscador y navegador Web Safari. 
+
+            <p class="Articulo1">
+              La empresa operaba, en mayo de 2014, más de 408 tiendas propias en nueve países, 
+              miles de distribuidores (destacándose los distribuidores prémium o Apple Premium Resellers) y
+               una tienda en línea (disponible en varios países) donde se venden sus productos y se presta 
+               asistencia técnica. De acuerdo con la revista Fortune, Apple fue la empresa más llamativa en el mundo entre 2008 y 2012</p>
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+
+          <article>
+            <h3>¿QUE ARTICULOS VENDE LA APPLE?</h3>
+            <img class="web"
+              src="IMAGEN/no-comprar-productos-apple.webp"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+
+            <p class="Articulo1"><strong>-Mac.</strong> es la línea de ordenadores personales diseñada, 
+              desarrollada y comercializada por Apple Inc. En sus inicios fue una alternativa económica 
+              y doméstica al Lisa, un avanzado microordenador empresarial, cuya línea de desarrollo fue absorbida por la línea Macintosh. El Mac terminó por convertirse en la línea estándar de desarrollo de los ordenadores de Apple, al desaparecer la línea evolutiva del Apple II.
+              
+              <br>
+              
+              <strong>Ipad.</strong> iPad es una línea de tabletas diseñadas y comercializadas por
+               Apple Inc. La primera generación fue anunciada el 27 de enero de 2010,
+                mientras que el 2 de marzo de 2011 apareció la segunda generación. Se sitúa en 
+                una categoría entre un teléfono inteligente y una computadora portátil, enfocado más al acceso que a la creación de aplicaciones y temas.
+              <br>
+              <br>
+              <strong>Iphone.</strong>El iPhone dispone de cámara de fotos y un reproductor de música (equivalente al del iPod),
+               además de software para enviar y recibir mensajes de texto y de voz. 
+               También ofrece servicios de Internet, como enviar, recibir y leer correo electrónico, cargar
+                páginas web y conectividad por Wi-Fi. La primera generación de teléfonos eran GSM cuatribanda con 
+                la tecnología EDGE; la segunda generación incluía UMTS con HSDPA.;​ la sexta generación ya incluía 4G LTE. 
+                La decimotercera generación comenzó a incluir soporte para redes 5G.
+
+
+              <br>
+
+              <br>
+              <strong>Watch.</strong> El reloj posee una corona digital que, aparte de cumplir una función estética 
+              funciona para la respuesta háptica. Debido al pequeño tamaño de la pantalla es poco 
+              práctico usar los gestos del resto de los dispositivos con pantallas táctiles de Apple. 
+              El dispositivo cuenta con una pantalla de retina especial y flexible, con una protección 
+              diferente para cada clase de reloj, que es capaz de detectar la presión ejercida sobre la
+               misma; por lo tanto, capta la diferencia entre pulsación y presión. A esta tecnología Apple la ha denominado "Force Touch", la cual, tiempo más tarde, pasó a llamarse 
+               "3D Touch", debido a problemas de derechos de autor con Android.
+               
+              <br>
+              <br>
+              <strong>Airpods.</strong>son auriculares Bluetooth lanzados por Apple en diciembre del 2016.
+
+             Además de reproducir música y responder llamadas, los AirPods tienen soporte para el 
+             asistente digital de Apple, Siri, y una interfaz de usuario física.
+              Los AirPods Incluyen su propio Apple W1 SoC, cuyas funciones de conectividad adicionales 
+              requieren los dispositivos que manejan iOS 10, macOS Sierra, watchOS 3, o posteriores.
+            ​ Se sincronizan automáticamente a través del servicio Apple iCloud, permitiendo a los usuarios intercambiar fuentes 
+            de audio a otros dispositivos conectados mediante el mismo Apple ID.
+            ​ También pueden funcionar como audífonos Bluetooth estándar al ser conectados a cualquier 
+            dispositivo que soporte Bluetooth 4.0 o superiores, incluyendo dispositivos de Android.
+              <br>
+              <br>
+              <strong>AirTag.</strong>te ayuda a encontrar tus cosas muy fácilmente. Ponle uno a tus llaves y otro a tu mochila 
+              para que siempre puedas ver su ubicación en la app Encontrar. Además, esta app también te permite localizar tus 
+              dispositivos Apple y mantenerte en contacto con tus familiares y amistades.
+            </p>
+
+           
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+          <article>
+            <h3><strong>EVOLUCION DE LA APPLE</strong></h3>
+            <img class="web"
+              src="IMAGEN/3e797d07bb5f169a5320c0bd3cdf75ae.jpeg"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <p class="Articulo1">
+              La primera etapa de Apple como empresa puede decirse que duró unos 6 años. 
+              Todo comienza cuando dos amigos llamados Steve, Jobs y Wozniak, decidieron crear y 
+              vender una placa de circuito que sería llamado Apple I. Jobs y Wozniak tuvieron que 
+              vender varias pertenencias para poder financiar su proyecto.
+
+</p>
+            <img class="web" src="IMAGEN/steve-jobs-y-wozniak.webp"
+              alt="aqui va una image">
+
+            <p class="Articulo1">
+
+              El Apple I vendió unos 200 unidades a un precio de 666,66 dólares, 
+              pero no fue un proyecto rentable que hiciera crecer, económicamente hablando, 
+              a Apple. La inversión de 250.000 dólares de Mike Markkula hizo posible la creación de 
+              Apple II, lanzado a mediados de 1979. Este sí fue un gran éxito para Apple y llevó a la 
+              compañía a su siguiente capítulo.
+
+
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+
+          </article>
+
+
+          <article>
+            <h3><strong>Etapa de crecimiento, 1982 a 1985</strong>
+            </h3>
+            <img class="web"
+              src="IMAGEN/img_tamiguet_20160812-100927_imagenes_lv_otras_fuentes_no_archivables_macintosh-128k-068-k5QH-U403876528612Z4C-992x558@LaVanguardia-.webp"
+              alt="">
+
+            <p class="Articulo1">
+              Los primeros años bajo el mandato de Sculley fueron buenos para Apple, 
+              aunque Jobs fue en muchos casos un problema. La compañía siguió creciendo y el 
+              Macintosh supuso la mayor revolución de la industria. El primer ordenador para el público 
+              general con una interfaz gráfica de usuario. Apple creció mucho durante este periodo, a 
+              pesar de tener rivales fuertes como IBM o Microsoft.
+
+
+            </p>
+            <p class="Articulo1">
+              Sin embargo, la compañía no supo encontrar la forma de vender un gran producto como el Macintosh, que pasado su éxito inicial dejo de ser rentable. John Sculley y la junta directiva tomaron una serie de decisiones que no gustaron, como juntar a diferentes equipos de trabajo y o cancelar proyectos.
+
+              Esto generó muchos problemas con Jobs, que terminó siendo despedido de la empresa que había fundado en 1985 tras un intento de "golpe de estado" para hacerse con el poder de Apple.
+            </p>
+            
+            <h3><strong>La era de la destrucción, 1985 a 1997</strong>
+            </h3>
+            <p class="Articulo1">
+              Esta es la peor época para Apple, una compañía sin rumbo, que perdió toda la ventaja en una década y que casi la lleva a la destrucción. Apple vendía el Macintosh con unos altísimos márgenes de beneficio, y eso comenzó a condenar a la compañía cuando aparecieron PCs clónicos que ofrecían gran parte de las funcionalidades del Macintosh.
+
+              A finales de los 80 y principios de los 90, todo parecía ir bastante bien. En 1991, Apple lanzo el Powerbook, un portátil que fue un autentico superventas. Introdujo System 7, una actualización que traía una interfaz a todo color.
+              <br> <br>
+              Sin embargo, la compañía comenzó a lanzar demasiados dispositivos al mercado, la gran mayoría sin ningún éxito. Cámaras digitales, consolas, PDAs como el Newton. Además, Microsoft lazó Windows con una interfaz gráfica similar a la del Macintosh, haciendo esta tecnología mucho más asequible.
+
+              <br> <br>
+
+            
+
+          <article>
+            <h3><strong>Etapa de resurgimiento y expansión, 1997 a 2010
+            </strong></h3>
+                      
+            <p class="Articulo1">
+              Jobs llegó como asesor, pero apenas tardó unos meses en convertirse CEO interino tras 
+              el despido de Gil Amelio. Jobs tomo muchas decisiones, eliminando la mayoría de 
+              productos que estaban en desarrollo para centrarse en apenas un puñado de dispositivos.
+
+ </p>
+
+
+            <p class="Articulo1">
+
+              El primero de ellos fue el iMac, lanzado en 1998 y diseñado por Jonathan Ive, 
+              vendió 800.000 unidades en sus primeros cinco meses. Jobs comienza a ver el potencial 
+              del software y decide hacer numerosas adquisiciones de las que nacen programas como Final 
+              Cut Pro, iMovie, iTunes o iPhoto. Programas que solo funcionaban en los Mac y que daban un 
+              motivo para comprarlos.
+
+              <img class="web"
+              src="IMAGEN/Steve-Jobs-biopic-imac-0.webp"
+                             
+              alt="">
+
+              <br>
+              <br>
+              En esta época Apple lanza dispositivos geniales como los MacBook Pro, cambiando sus 
+              procesadores por los de Intel, el iPod, que revoluciona la industria musical, y el iPhone, 
+              que hace lo mismo en el mercado de la telefonía móvil. Apple crece como la espuma, 
+              liderando en muchos mercados diferentes.
+
+              
+          
+
+            </p>
+
+           
+          <article>
+            <h3><strong>El gigante tecnológico, 2010 hasta la actualidad
+
+            </strong></h3>
+            <p class="Articulo1">    
+              Puede decirse que en el año 2010, Apple comienza a convertirse en el gigante 
+              tecnológico que es hoy en día. La compañía presentó ese año el iPad y el iPhone 4, 
+              dos dispositivos adelantados varios años a sus competidores. Esa ventaja hizo que la 
+              capitalización bursátil de Apple se disparara.
+
+              <br>
+              Lamentablemente, en el año 2011, Steve Jobs fallecía dejando una Apple en su mejor momento. Sin embargo, Apple no puede decir que esta década le haya ido mal, se ha convertido en la compañía más valiosa del mundo y sigue lanzando dispositivos increíbles.
+
+
+              <br>
+            </p>
+
+            <div>
+
+            <img class="web"
+              src="IMAGEN/giphy (1).gif"
+              alt="">
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+          </article>
+
+        </article>
+
+        </section>
+        <!-- Barra lateral -->
+        <aside class="col-28">
+          <h2 class="h4">ANUNCIOS🗞️</h2>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="IMAGEN/server_room.jpg"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">Un servidor es un conjunto de computadoras capaces de atender las peticiones de un cliente y devolverle una respuesta en concordancia.</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+        
+      
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img class="web"
+              src="IMAGEN/890e2800236cb1cc.png"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p>Apple Magic Mouse USB Type-C, La batería interna dura un mes o más entre cargas, Se empareja automáticamente con tu Mac, Incluye cable USB-C.
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img class="web"
+              src="IMAGEN/61qD7CceSVL._AC_UF894,1000_QL80_.jpg"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p>Cargador inalámbrico 3 en 1: la estación de carga puede cargar la mayoría de los teléfonos que admiten carga inalámbrica.
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/NEzvnGbfljs?si=xwlANz9npUJ3hwLV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Evolución tecnológica es el nombre dado a una teoría de los estudios de ciencia, tecnología y sociedad, para describir el desarrollo histórico de la tecnología.
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/hgitkRjrUuY?si=5FMPU9Hx_6yc6R-P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>La ingeniería de sistemas es un campo interdisciplinario de la ingeniería que permite estudiar y comprender la realidad.
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/EaTeni7YCyM?si=B6i-bEKOgGrafi-Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>C++ es un lenguaje de programación diseñado en 1979 por Bjarne Stroustrup.
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+         
+          
+
+  
+
+        </aside>
+
+      </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white mt-4">
+      <h2>&copy; 
+        079 ANYELINA MERCEDES DIAZ TAVAREZ</h2>
+
+      <hr>
+      <div class="centrar-contenido">
+        <div class="redes">
+          <h2>Sigueme en mi Redes Sociales</h2>
+
+          <!-- Agregamos font awesome icons -->
+          <a href="https://www.youtube.com/@anyelinadiaz7804/about" class="fa fa-youtube-square"
+            style="font-size:48px; color: rgb(214, 10, 166);"></a>
+          <a href="https://www.facebook.com/profile.php?id=100007296497065" class="fa fa-facebook-square"
+            style="font-size:48px; color: rgb(214, 10, 166);"></a>
+          <a href="https://twitter.com/Anyelin05400924" class="fa fa-twitter-square"
+            style="font-size:48px;  color: rgb(214, 10, 166);"></a>
+          <a href="https://github.com/anyee02" class="fa fa-github-square"
+            style="font-size:48px; color: rgb(214, 10, 166);"></a>
+          <a href="https://www.instagram.com/anyee_diaz/" class="fa fa-instagram"
+            style="font-size:48px; color: rgb(214, 10, 166);"></a>
+
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+</body>
+
+</html>
